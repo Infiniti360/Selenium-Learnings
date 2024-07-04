@@ -905,3 +905,192 @@ https://www.browserstack.com/guide/alerts-and-popups-in-selenium
 
 Selenium Wait Commands: Implicit, Explicit, and Fluent Wait
 https://www.browserstack.com/guide/wait-commands-in-selenium-webdriver
+
+Selenium Wait Commands: Implicit, Explicit, and Fluent Wait
+https://www.browserstack.com/guide/wait-commands-in-selenium-webdriver
+
+Understanding ExpectedConditions in Selenium (with Types and Examples)
+https://www.browserstack.com/guide/expectedconditions-in-selenium
+
+How to get Selenium to wait for a page to load
+https://www.browserstack.com/guide/selenium-wait-for-page-to-load
+
+Wait Commands in Selenium C and C#
+https://www.browserstack.com/guide/wait-commands-in-selenium-c-and-c-sharp
+
+Design Patterns in Selenium
+https://www.browserstack.com/guide/design-patterns-in-selenium
+
+Design Patterns in Automation Framework
+https://www.browserstack.com/guide/design-patterns-in-automation-framework
+
+Page Object Model in Selenium and JavaScript
+https://www.browserstack.com/guide/page-object-model-using-selenium-javascript
+
+Understanding No Such Element Exception in Selenium
+https://www.browserstack.com/guide/no-such-element-exception-selenium
+
+Agile Testing Metrics that every tester must know
+https://www.browserstack.com/guide/agile-testing-metrics
+
+11 Agile Testing Challenges and its Solutions
+https://www.browserstack.com/guide/agile-testing-challenges
+
+Continuous Integration in Agile
+https://www.browserstack.com/guide/continuous-integration-with-agile
+
+Selenium Automation Framework: A Detailed Guide
+https://www.browserstack.com/guide/selenium-framework
+
+Software Testing Strategies and Approaches
+https://www.browserstack.com/guide/software-testing-strategies-and-approaches
+
+5 Questions to ask before every Software Release
+https://www.browserstack.com/guide/questions-to-ask-before-software-release
+
+What is Automation Testing: Benefits, Strategy, Tools
+https://www.browserstack.com/guide/automation-testing-tutorial
+
+Best Practices for Selenium Test Automation
+https://www.browserstack.com/guide/best-practices-in-selenium-automation
+
+6 Things to avoid when writing Selenium Test Scripts
+https://www.browserstack.com/guide/things-to-avoid-in-selenium-test-scripts
+
+ChatBot Testing : A Beginner’s Guide
+https://www.browserstack.com/guide/what-is-chatbot-testing
+
+Best Practices
+https://www.browserstack.com/guide/category/best-practices
+
+Parallel Testing with Selenium
+https://www.browserstack.com/guide/parallel-testing-with-selenium
+
+Learn Selenium with Java to run Automated Tests
+https://www.browserstack.com/guide/selenium-with-java-for-automated-test
+
+How does Selenium isDisplayed() method work?
+https://www.browserstack.com/guide/isdisplayed-method-in-selenium
+
+Top 21 Monitoring Tools in DevOps for 2024
+https://www.browserstack.com/guide/top-devops-monitoring-tools
+
+Understanding Playwright Assertions
+https://www.browserstack.com/guide/playwright-assertions
+
+Understanding No Such Element Exception in Selenium
+https://www.browserstack.com/guide/no-such-element-exception-selenium
+
+Playwright vs Selenium: Which to choose in 2024
+https://www.browserstack.com/guide/playwright-vs-selenium
+
+Unit Testing of React Apps using JEST : Tutorial
+https://www.browserstack.com/guide/unit-testing-of-react-apps-using-jest
+
+Test Plan vs Test Strategy: Purpose & Differences
+https://www.browserstack.com/guide/test-plan-vs-test-strategy
+
+Understanding Element Click Intercepted Exception in Selenium
+https://www.browserstack.com/guide/element-click-intercepted-exception-selenium
+
+Understanding Element Not Interactable Exception in Selenium
+https://www.browserstack.com/guide/understanding-element-not-interactable-exception-in-selenium
+
+Cypress vs Selenium: Key Differences
+https://www.browserstack.com/guide/cypress-vs-selenium
+
+How to Select Date from Datepicker in Selenium Webdriver using Java
+https://www.browserstack.com/guide/datepicker-in-selenium
+
+Nightwatch vs Mocha vs Protractor : Differences
+https://www.browserstack.com/guide/nightwatch-vs-protractor-vs-mocha
+
+Understanding Stale Element Reference Exception in Selenium
+https://www.browserstack.com/guide/stale-element-reference-exception-selenium
+
+Top 9 JavaScript Testing Frameworks in 2024
+https://www.browserstack.com/guide/top-javascript-testing-frameworks
+
+Understanding Selenium Timeouts
+https://www.browserstack.com/guide/understanding-selenium-timeouts
+
+Cross-Site Scripting (XSS) Testing to Prevent XSS attacks
+https://www.browserstack.com/guide/xss-testing
+
+Understanding Testing Library Jest DOM
+https://www.browserstack.com/guide/testing-library-jest-dom
+
+Understanding ExpectedConditions in Selenium (with Types and Examples)
+https://www.browserstack.com/guide/expectedconditions-in-selenium
+
+How to handle Alerts and Popups in Selenium?
+https://www.browserstack.com/guide/alerts-and-popups-in-selenium
+
+Handling Login Popups in Selenium WebDriver and Java
+https://www.browserstack.com/guide/alerts-and-popups-in-selenium
+
+How to Close a Browser in Selenium
+https://www.browserstack.com/guide/close-browser-in-selenium
+
+How to perform Mouse Hover Action in Selenium
+https://www.browserstack.com/guide/mouse-hover-in-selenium
+
+All about TestNG Listeners in Selenium
+https://www.browserstack.com/guide/testng-listeners
+
+TestNG Annotations in Selenium Webdriver with Examples
+https://www.browserstack.com/guide/testng-annotations-in-selenium
+
+How to Scroll Down or Up using Selenium Webdriver
+https://www.browserstack.com/guide/selenium-scroll-tutorial
+
+How to use DataProvider in Selenium and TestNG?
+https://www.browserstack.com/guide/dataprovider-in-selenium-testng
+
+TestNG vs Cucumber: Core Differences
+https://www.browserstack.com/guide/testng-vs-cucumber
+
+Test Automation using Selenium and Cucumber Framework: Tutorial
+https://www.browserstack.com/guide/automation-using-cucumber-selenium
+
+What is Cucumber Framework? (Benefits of Cucumber Testing)
+https://www.browserstack.com/guide/learn-about-cucumber-testing-tool
+
+How to Run Tests with Cypress and Cucumber
+https://www.browserstack.com/guide/how-to-run-cypress-cucumber-test
+
+How to Automate TestNG in Selenium
+https://www.browserstack.com/guide/testng-framework-with-selenium-automation
+
+Page Object Model with Playwright: Tutorial
+https://www.browserstack.com/guide/page-object-model-with-playwright
+
+Page Object Model and Page Factory in Selenium
+https://www.browserstack.com/guide/page-object-model-in-selenium
+
+Page Object Model and Page Factory in Selenium C#
+https://www.browserstack.com/guide/page-object-model-and-page-factory-in-selenium-c
+
+Page Object Model in Cucumber
+https://www.browserstack.com/guide/page-object-model-in-cucumber
+
+Cucumber Best Practices to follow for efficient BDD Testing
+https://www.browserstack.com/guide/cucumber-best-practices-for-testing
+
+How to run failed test cases using TestNG in Selenium Webdriver?
+https://www.browserstack.com/guide/run-failed-test-cases-in-testng-and-selenium
+
+Database Testing using Selenium and TestNG
+https://www.browserstack.com/guide/database-testing-using-selenium
+
+How to Scroll Down or Up using Selenium Webdriver
+https://www.browserstack.com/guide/selenium-scroll-tutorial
+
+How to perform Mouse Hover Action in Selenium
+https://www.browserstack.com/guide/mouse-hover-in-selenium
+
+5 Common Bugs Faced in UI Testing
+https://www.browserstack.com/guide/bugs-in-ui-testing
+
+How to handle Multiple Tabs in Selenium
+https://www.browserstack.com/guide/handling-tabs-in-selenium
