@@ -1,0 +1,96 @@
+chatgpt fixes
+Why it breaks only on GitHub Actions
+	1.	The workflow runs your tests inside the official cypress/* Docker image.
+That image drops root privileges and runs as user 1001.
+	2.	actions/checkout leaves every file in the workspace owned by root (UID 0).
+Locally you own the repo, so fs.writeFileSync() can create
+cypress/fixtures/…/tradeboardExtract-…xlsx.
+Inside the container the non-root user does not have write permission, so
+Node throws
+
+EACCES: permission denied, open
+'cypress/fixtures/US/Tradeboard/tradeboardExtract_EQUITYINDEXTRADERPM.xlsx'
+
+
+	3.	The same problem appears with other writable locations (cache, screenshots, videos) and is called out in the Cypress-action docs: adding --user 1001 (or changing ownership) avoids “permissions issues”  ￼.
+
+⸻
+
+Two proven fixes
+
+Fix	What to do	Pros / Cons
+A. Tell Docker to run as UID 0 (root)	```yaml	
+jobs:		
+e2e:		
+
+runs-on: ubuntu-latest
+container:
+  image: cypress/browsers:latest      # or your pinned tag
+  options: --user 0                  # run as root
+
+| **B. Keep user 1001 and chown the workspace** |```yaml
+steps:
+  - uses: actions/checkout@v4
+
+  # make the whole repo writable by uid 1001 *before* Cypress starts
+  - name: Fix permissions
+    run: sudo chown -R 1001:1001 "$GITHUB_WORKSPACE"
+
+  - uses: cypress-io/github-action@v6
+    # ...
+```|Keeps container hardening, only one extra step.<br>Needs `sudo` (present in GH runners). |
+
+Either approach unblocks file creation so the Excel download succeeds.
+
+---
+
+## Optional clean-ups to make the tests CI-friendly
+
+<details>
+<summary>1. Stop writing into <code>cypress/fixtures</code></summary>
+
+`cypress/fixtures` is committed to git and can be mounted read-only in some CI
+environments.  
+Prefer the built-in **`downloadsFolder`** (you already set it to
+`cypress/downloads`) or an OS-tmp dir:
+
+```ts
+const downloads = Cypress.config('downloadsFolder');
+const tradeboardDir = path.join(downloads, domicile.toUpperCase(), 'Tradeboard');
+
+cy.downloadFile(url, tradeboardDir, `${fileName}.xlsx`);
+
+cy.task('generateJSONFromExcel', {
+  excelFilePath: path.join(tradeboardDir, `${fileName}.xlsx`),
+  sheetname: 'TradeBoard Details'
+});
+
+</details>
+
+
+<details>
+<summary>2. Harden the plugin helpers</summary>
+
+
+async function ensureFolder(folderPath: string) {
+  await fs.promises.mkdir(folderPath, { recursive: true, mode: 0o777 });
+  return { success: true };
+}
+
+Add the same mode flag (or check fs.constants.W_OK) in
+writeToExcel() and deleteFilesInFolder() if you keep writing inside the repo.
+
+</details>
+
+
+
+⸻
+
+TL;DR
+
+The tests fail because the Docker user (UID 1001) can’t write to files owned by
+root.
+Run the container as root or chown the workspace to UID 1001 before the
+cypress-io/github-action step.
+After that the Excel download and parsing code you showed will work unchanged,
+and the entire E2E suite will pass in GitHub Actions.
