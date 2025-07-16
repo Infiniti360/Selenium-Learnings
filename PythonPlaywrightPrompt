@@ -1,0 +1,90 @@
+Python Playwright Prompt
+
+Here’s a version of the prompt tailored for behave (BDD-style) and CI pipeline support, including steps to run the test, see logs, and generate Allure reports.
+
+⸻
+
+✅ Prompt (for Behave, Allure, Logging, CI-ready)
+
+I need to build an automated UI testing framework using Playwright with Python, structured using the behave BDD framework.
+The test scenario is as follows:
+	•	Navigate to a Funds URL protected by Okta SSO.
+	•	After successful login, the user is redirected to a Dashboard.
+	•	On the Dashboard page, there is a dropdown with options: Baskets and Funds. The test must select the “Funds” option.
+	•	Then enter “VYMI” in the search box, click Search, and verify that VYMI appears in the table grid.
+	•	Click the VYMI row, which opens a dialog box.
+	•	In the dialog, assert that several dropdown fields (e.g., strategy, riskLevel, currency) have specific expected values.
+
+Additional requirements:
+	•	Use Page Object Model, with separate classes like DashboardPage, FundsPage, and BasePage.
+	•	Integrate with Allure reporting and annotate BDD steps so they appear in Allure output.
+	•	Log all actions and errors into a file like logs/test_log.log.
+	•	Automatically take screenshots on failure, and optionally run in debug mode (e.g., PWDEBUG=1 or page.pause()).
+	•	Add documentation for running tests, generating reports, and viewing logs.
+	•	Make the framework CI-ready, including a sample GitHub Actions CI config that:
+	•	Installs dependencies
+	•	Runs the tests
+	•	Generates Allure report artifacts
+	•	Uploads screenshots and logs if tests fail
+
+Please provide:
+	1.	The features/ folder with .feature file describing the scenario.
+	2.	Step definitions using behave that utilize Page Objects.
+	3.	Page classes in a pages/ folder.
+	4.	Logging and screenshot hook in environment.py.
+	5.	Commands to run tests, view logs, and generate Allure reports.
+	6.	Sample requirements.txt, behave.ini, and pytest.ini.
+	7.	GitHub Actions CI config to run the test suite and publish Allure results.
+
+⸻
+
+✅ Expected Directory Structure
+
+toca_ui_automation/
+├── features/
+│   ├── steps/
+│   │   └── test_funds_steps.py
+│   ├── environment.py
+│   └── funds.feature
+│
+├── pages/
+│   ├── base_page.py
+│   ├── dashboard_page.py
+│   └── funds_page.py
+│
+├── logs/
+│   └── test_log.log
+│
+├── allure-results/
+│
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+│
+├── requirements.txt
+├── behave.ini
+└── README.md
+
+
+⸻
+
+🛠️ Basic Commands
+	•	Run tests:
+
+behave
+
+
+	•	View logs:
+
+cat logs/test_log.log
+
+
+	•	Generate Allure report:
+
+allure serve allure-results
+
+
+
+⸻
+
+Would you like me to generate all these files and structure as a downloadable GitHub repo template?
